@@ -1,0 +1,99 @@
+
+
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 49px;
+    z-index: 1;
+  
+    /* Remove margins that limit width */
+    margin-left: 0;
+    margin-right: 0;
+  
+    /* Make it full width */
+    width: 100%;
+    padding: 50px 10%; /* Keep some padding inside for text */
+  
+    /* Gradient background */
+    background: linear-gradient(to bottom, bisque, #FFFFFF);
+  }
+  
+
+
+.content {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+color: black;
+z-index: 1;
+}
+
+.title {
+font-size: 72px;
+font-weight: 900;
+margin-bottom: 33px;
+font-family: var(--font-roboto);
+color: black; /* <-- Add this */
+background: none; /* <-- Remove gradient */
+-webkit-text-fill-color: initial; /* Reset */
+-webkit-background-clip: initial; /* Reset */
+}
+
+
+.description {
+font-size: 30px;
+font-family: var(--font-roboto);
+margin-bottom: 52px;
+}
+
+
+
+@keyframes floating {
+0% {
+transform: translate(0, 0px);
+}
+50% {
+transform: translate(0, 10px);
+}
+100% {
+transform: translate(0, -0px);
+}
+}
+
+ul {
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  li::marker {
+    color: #ff6600; /* optional: orange bullets */
+  }
+
+  .centeredSection {
+    width: 100%;
+    text-align: center;
+    padding: 40px 10%;
+    box-sizing: border-box;
+  }
+  
+  .centeredList {
+    display: inline-block; /* makes the list take only as much width as it needs */
+    text-align: left;       /* keeps list bullets aligned properly */
+    margin-top: 20px;
+  }
+
+@media screen and (max-width: 830px) {
+.container {
+flex-direction: column-reverse;
+}
+
+.content {
+align-items: center;
+}
+
+
+}
